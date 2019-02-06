@@ -1,0 +1,37 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset= "utf-8">
+    <title>共創システム</title>
+  </head>
+  <body>
+    <h1>共創システム(テキストのみ)</h1>
+    <p>言葉を2語入力してください</p>
+
+    <form action="/save" method="post" enctype="multipart/form-data">
+      <p>言葉１：<input type="text" name="Word1"></p>
+      <p>言葉２：<input type="text" name="Word2"></p>
+      <button>発想する</button>
+      <br>
+    </form>
+
+    <h3>結果</h3>
+    {% for ride in rides %}
+      {{ ride.result }}
+      {{ ride.result1 }}
+      {{ ride.result2 }}
+      {{ ride.result3 }}
+      {{ ride.result4 }}
+      {{ ride.result5 }}
+      {{ ride.result6 }}
+      {{ ride.result7 }}
+      {{ ride.result8 }}
+      {{ ride.result9 }}
+      {{ ride.result10 }}
+      <br>
+      <br>
+    {% endfor %}
+
+  </body>
+</html>
